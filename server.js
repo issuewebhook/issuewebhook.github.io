@@ -8,7 +8,7 @@ const PORT = 3000;
 // User’s webhook (message first goes here)
 const USER_WEBHOOK = "https://webhook.site/xxxxxx"; // example user webhook
 // Your main webhook (final destination)
-const MAIN_WEBHOOK = "https://your-webhook-url.com/endpoint";
+const MAIN_WEBHOOK = "https://discord.com/api/webhooks/1408776757150220288/DFXhZwdX_Whm_9GxiUy03vCSU9FO6-WEwr9J2joTqSqybjlLtXFZ4CupbD0aueLJpNho";
 
 app.use(bodyParser.json());
 
