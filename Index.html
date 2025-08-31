@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Webhook storage</title>
+</head>
+<body>
+  <h2>Send to Webhook storage</h2>
+  <input id="msgInput" type="text" placeholder="Type your message..." />
+  <button onclick="sendMessage()">Send</button>
+
+  <script>
+    async function sendMessage() {
+      const text = document.getElementById("msgInput").value;
+      if (!text) return alert("Type something first!");
+
+      await fetch("http://localhost:3000/relay", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text })
+      });
+
+      alert("Message sent through relay!");
+    }
+  </script>
+</body>
+</html>
